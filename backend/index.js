@@ -7,7 +7,7 @@ dotenv.config();
 const app = express()
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
-app.use(cors({ origin: process.env.FRONTEND_URI}))
+app.use(cors({ origin:process.env.FRONTEND_URI}))
 app.use(express.json())
 app.get("/", (req, res) => {
   res.send("Backend is running successfully 🚀");
