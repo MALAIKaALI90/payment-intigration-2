@@ -9,6 +9,9 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 app.use(cors({ origin: process.env.FRONTEND_URI}))
 app.use(express.json())
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+});
 app.post("/create-checkout-sessions",async (req,res)=>{
     try {
         const {product}=req.body; //name image price
@@ -28,7 +31,7 @@ app.post("/create-checkout-sessions",async (req,res)=>{
             mode:"payment",
             success_url:`${process.env.FRONTEND_URI}/success`,
             cancel_url:`${process.env.FRONTEND_URI}/cancel`,
-            
+
 
         })
             res.json({url:session.url})
