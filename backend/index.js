@@ -40,9 +40,9 @@ app.post("/create-checkout-sessions",async (req,res)=>{
         res.status(500).json({error:error.message})
     }
 })
-app.listen(process.env.PORT,()=>{
-    console.log(`Server is running on ${process.env.PORT}`);
+// app.listen(process.env.PORT,()=>{
+//     console.log(`Server is running on ${process.env.PORT}`);
     
-})
+// })
 export default app
 
