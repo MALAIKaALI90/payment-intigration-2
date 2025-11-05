@@ -66,8 +66,8 @@ const App = () => {
           </div>
         }
       />
-      <Route  path="success" element={<Success/>}/>
-      <Route  path="cancel" element={<Cancel/>}/>
+      <Route  path="/success" element={<Success/>}/>
+      <Route  path="/cancel" element={<Cancel/>}/>
 
 
      
